@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  font-family: poppins, sans-serif;
+  user-select: none;
+  background: url(/images/background.jpg) center center / cover fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding: 0 80px;
+  width: 100%;
+  height: 70px;
+  color: white;
+}
+
+.header .logo {
+  font-size: 30px;
+  margin: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header .nav-bar {
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.header .nav-bar li {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.header .nav-bar li a {
+  font-size: 0.8em;
+  font-weight: 600;
+  color: white;
+  margin: 0 25px;
+  position: relative;
+}
+
+.header .nav-bar li a::after {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.header .nav-bar li a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-bar .login-btn {
+  height: 40px;
+  width: 150px;
+  background: transparent;
+  border: solid 2px white;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-bar .login-btn:hover {
+  background:white;
+  color: black;
+}
+
+.wraper {
+  margin-top: 50px;
+  display: flex;
+  width: 400px;
+  height: 460px;
+  background: rgba(131, 130, 130, 0.5);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  scale: 0;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  transition: all 0.2s ease;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 1);
+}
+
+.wraper-scale {
+  scale: 1;
+}
+
+.wraper-new-height {
+  height: 530px;
+}
+
+.container {
+  display: flex;
+}
+
+.wraper .close-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  color: white;
+  height: 40px;
+  width: 40px;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 20px;
+  background-color: black;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.input-page {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.toggle-pages {
+  transform: translateX(-400px);
+}
+
+.input-page span {
+ font-size: 30px;
+ font-weight: 600;
+ margin-bottom: 20px;
+ color: black;
+}
+
+ label {
+  display: flex;
+  padding: 20px 0;
+  width: 100%;
+  position: relative;
+  margin: 10px 0;
+  transition: 0.5s ease;
+}
+
+ label input {
+  height: 30px;
+  width: 100%;
+  background: transparent;
+  border-bottom: 2px solid;
+  padding: 0 30px 0 10px;
+  font-size: 15px;
+}
+
+.material-symbols-outlined {
+  position: absolute;
+  height: 1px;
+  border-radius: 5px;
+  top: 30;
+  right: 0;
+}
+
+ .input-page label text {
+  position: absolute;
+  color: black;
+  font-size: 17px;
+  top: 30;
+  left: 0;
+  transition: 0.5s ease;
+}
+
+ label input:focus~text,
+ label input:valid~text {
+ top: 0;
+}
+
+.term-conditions,
+.forgot-remember {
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  justify-content: space-between;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.term-conditions {
+  justify-content: flex-start;
+}
+
+.term-conditions input,
+.forgot-remember input {
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+  cursor: pointer;
+  
+}
+
+.term-conditions a,
+.forgot-remember a {
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.log-reg-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.register-login {
+  color: black;
+  font-size: 15px;
+}
+
+.register-login a {
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.term-conditions a:hover,
+.register-login a:hover,
+.forgot-remember a:hover {
+  text-decoration: underline;
+}
+
+
+@media(max-width: 768px) {
+  .nav-bar li a {
+    display: none;
+  }
+
+  .wraper,
+  .input-page {
+    width: calc(100vw - 80px);
+  }
+
+  .toggle-pages {
+    transform: translateX(calc(-100vw + 80px));
+  }
+}
+
+
+
+
